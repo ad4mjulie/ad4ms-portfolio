@@ -46,7 +46,7 @@ The portfolio website is built using the following tools and technologies:
 
 2. Navigate to the project directory:
    ```bash
-   cd 3D-interactive-portfolio
+   cd ad4ms-portfolio
    ```
 
 3. Install dependencies:
