@@ -1,9 +1,9 @@
 const config = {
-  title: "Adam Noah | AI Enthusiast",
+  title: "Adam Noah | NETWORK & AI SYSTEMS DEV",
   description: {
     long: "Explore the portfolio of Adam, a Computer Science Engineer with 1.5 year experience in Devlopment, DevOps & Database management with hands-on experience in deploying & automating workflows, & collaborating with foreign clients. Strong analytical skills, effective communication, and a team-oriented approach to driving process improvements and delivering results.",
     short:
-      "Discover the portfolio of Adam, a AI enthusiast solving real life problems in DevOps and Development.",
+      "Discover the portfolio of Adam, a NETWORK & AI SYSTEMS DEV solving real life problems in DevOps and Development.",
   },
   keywords: [
     "Adam",

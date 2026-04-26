@@ -36,6 +36,8 @@ import {
   SiArduino,
   SiOpengl,
   SiCisco,
+  SiTensorflow,
+  SiKeras,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import css from "styled-jsx/css";
@@ -44,17 +46,19 @@ const BASE_PATH = "/assets/projects-screenshots";
 const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-start gap-3 my-3 mb-8">
-      <Link
-        className="font-mono underline flex gap-2"
-        rel="noopener"
-        target="_new"
-        href={live}
-      >
-        <Button variant={"default"} size={"sm"}>
-          Visit Website
-          <ArrowUpRight className="ml-3 w-5 h-5" />
-        </Button>
-      </Link>
+      {live && (
+        <Link
+          className="font-mono underline flex gap-2"
+          rel="noopener"
+          target="_new"
+          href={live}
+        >
+          <Button variant={"default"} size={"sm"}>
+            Visit Website
+            <ArrowUpRight className="ml-3 w-5 h-5" />
+          </Button>
+        </Link>
+      )}
       {repo && (
         <Link
           className="font-mono underline flex gap-2"
@@ -306,6 +310,18 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiCisco />,
   },
+  tensorflow: {
+    title: "TensorFlow",
+    bg: "black",
+    fg: "white",
+    icon: <SiTensorflow />,
+  },
+  keras: {
+    title: "Keras",
+    bg: "black",
+    fg: "white",
+    icon: <SiKeras />,
+  },
 };
 export type Project = {
   id: string;
@@ -321,30 +337,24 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    id: "alter",
-    category: "Fashion",
-    title: "Alter Brand",
-    src: "/assets/projects-screenshots/alter/landing.png",
+    id: "quantum-lab",
+    category: "Quantum Physics",
+    title: "Quantum Lab",
+    src: "/assets/projects-screenshots/quantum/landing.png",
     screenshots: ["landing.png"],
-    live: "https://alter-brand.vercel.app",
-    github: "https://github.com/remixalpha/indichic",
+    live: "",
+    github: "https://github.com/ad4mjulie/QuantumLab",
     skills: {
       frontend: [
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.python,
       ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.mongo,
-      ],
+      backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono">
-            A premium fashion brand digital experience built with the MERN stack. Designed to showcase the latest collections and foster a community of brand enthusiasts.
+            A modular Python system for quantum physics simulation, quantum algorithm execution, and interactive 3D visualisation of hydrogen and oxygen atoms and the ability to measure its wave function.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
         </div>
@@ -379,18 +389,18 @@ const projects: Project[] = [
     },
   },
   {
-    id: "galaxy",
-    category: "Visual Effect",
-    title: "Spinning galaxy visual",
-    src: "/assets/projects-screenshots/galaxy/landing.png",
+    id: "emotion-detection",
+    category: "AI / Deep Learning",
+    title: "Emotion Detection CNN",
+    src: "/assets/projects-screenshots/emotion/landing.png",
     screenshots: ["landing.png"],
-    live: "https://ad4mjulie.github.io/galaxy-ar0718/",
-    github: "", // User to provide
+    live: "",
+    github: "https://github.com/ad4mjulie/emotion-detection-cnn",
     skills: {
       frontend: [
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.spline,
-        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.tensorflow,
+        PROJECT_SKILLS.keras,
       ],
       backend: [],
     },
@@ -398,7 +408,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono">
-            A 3D interactive galaxy built with Three.js, blending colorful stars, drifting camera effects, and poetic visuals.
+            A deep learning model using Convolutional Neural Networks (CNN) to recognize human emotions from facial expressions. Built with Python and TensorFlow/Keras, it accurately classifies expressions into categories like happy, sad, angry, and more.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
         </div>

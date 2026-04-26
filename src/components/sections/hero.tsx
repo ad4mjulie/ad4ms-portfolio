@@ -71,13 +71,13 @@ const HeroSection = () => {
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
-                    AI Enthusiast
+                    NETWORK & AI SYSTEMS DEV
                   </p>
                 </BlurIn>
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
-                  href={"/assets/resume/Noah_Adam_Benrabah_Resume.pdf"}
+                  href={"/assets/resume/ADAMS-RESUME-.pdf"}
                   target="_blank"
                   className="flex-1"
                 >
